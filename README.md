@@ -11,7 +11,7 @@ Motivating example: `Refund mat karna` -> `Refund karna` deletes one token and f
 
 Model: MuRIL-base encoder -> [CLS] -> two heads (binary changed/preserved + 7-way dimension), loss `CE(A) + 0.5*CE(B)`.
 Dataset: 1,200 rule-generated contrast pairs (780 / 140 / 280 train/dev/test), split by seed sentence. Details and all results: [reports/final_report.md](reports/final_report.md).
-Model weights: not committed (`*.pt` is git-ignored). HF Hub: `https://huggingface.co/<YOUR-USERNAME>/meaningguard-muril` (placeholder, optional).
+Model weights: not committed (`*.pt` is git-ignored). HF Hub: `not uploaded (optional)` (placeholder, optional).
 
 ## Install
 ```

@@ -1,6 +1,6 @@
 # MeaningGuard: Detecting Meaning Changes in Romanized Hindi, Devanagari and Hinglish
 
-**Author:** Udit Prakash Singh · **Code:** https://github.com/<YOUR-USERNAME>/meaningguard (placeholder) · **Seed:** 42 · **Status of numbers:** every number below is copied from an actual run; a cell that has not been run says TBD together with the command that produces it.
+**Author:** Udit Prakash Singh · **Code:** https://github.com/JASNEET-KAUR-2/meaningguard (placeholder) · **Seed:** 42 · **Status of numbers:** every number below is copied from an actual run; a cell that has not been run says TBD together with the command that produces it.
 
 ## 1. Abstract
 
@@ -176,7 +176,7 @@ python -m meaningguard.train --config configs/muril_base.yaml
 python -m meaningguard.evaluate --pred predictions/muril_base_test.jsonl --gold data/processed/test.jsonl
 ```
 
-The full chronological procedure (Colab, baselines, ablations, GitHub push) is in `RUNBOOK.md`; the Colab notebook is `notebooks/colab_train.ipynb`. GitHub: https://github.com/<YOUR-USERNAME>/meaningguard (placeholder).
+The full chronological procedure (Colab, baselines, ablations, GitHub push) is in `RUNBOOK.md`; the Colab notebook is `notebooks/colab_train.ipynb`. GitHub: https://github.com/JASNEET-KAUR-2/meaningguard (placeholder).
 
 ## 10. Ethics and Data Statement
 

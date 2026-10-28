@@ -7,7 +7,7 @@ Run from the repository root (`meaningguard/`). Seed is fixed to 42 everywhere.
 Open `notebooks/colab_train.ipynb` in Colab (T4 GPU) and run cells 1 to 3, or paste:
 ```
 from google.colab import drive; drive.mount('/content/drive')
-!git clone https://github.com/<YOUR-USERNAME>/meaningguard.git /content/meaningguard
+!git clone https://github.com/JASNEET-KAUR-2/meaningguard.git /content/meaningguard
 %cd /content/meaningguard
 !pip install -q -r requirements.txt
 ```
@@ -60,7 +60,7 @@ Then write the one-paragraph analysis under each failure mode in `reports/error_
 
 ## 8. Push to GitHub
 ```
-git remote add origin https://github.com/<YOUR-USERNAME>/meaningguard.git
+git remote add origin https://github.com/JASNEET-KAUR-2/meaningguard.git
 git branch -M main
 git push -u origin main
 ```
@@ -70,8 +70,8 @@ git push -u origin main
 python - <<'PY'
 from huggingface_hub import HfApi, login
 login()
-api = HfApi(); api.create_repo("<YOUR-USERNAME>/meaningguard-muril", exist_ok=True)
-api.upload_file(path_or_fileobj="checkpoints/muril_base/best.pt", path_in_repo="best.pt", repo_id="<YOUR-USERNAME>/meaningguard-muril")
+api = HfApi(); api.create_repo("JASNEET-KAUR-2/meaningguard-muril", exist_ok=True)
+api.upload_file(path_or_fileobj="checkpoints/muril_base/best.pt", path_in_repo="best.pt", repo_id="JASNEET-KAUR-2/meaningguard-muril")
 PY
 ```
 
