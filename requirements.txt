@@ -1,0 +1,16 @@
+torch>=2.1
+transformers>=4.40
+datasets>=2.18
+accelerate>=0.29
+scikit-learn
+pandas
+numpy
+tqdm
+bitsandbytes
+sentencepiece
+protobuf
+gradio
+huggingface_hub
+indic-transliteration
+pyyaml
+pytest

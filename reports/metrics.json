@@ -1,0 +1,314 @@
+{
+ "dummy_always_changed": {
+  "n": 280,
+  "missing_predictions": 0,
+  "acc": 0.5,
+  "macro_f1": 0.3333333333333333,
+  "fpr": 1.0,
+  "detect_recall": {
+   "negation": 1.0,
+   "quantity": 1.0,
+   "deadline": 1.0,
+   "intent": 1.0,
+   "entity": 1.0
+  },
+  "dim_recall": {
+   "negation": 0.0,
+   "quantity": 0.0,
+   "deadline": 0.0,
+   "intent": 0.0,
+   "entity": 0.0
+  },
+  "support": {
+   "negation": 28,
+   "quantity": 28,
+   "deadline": 28,
+   "intent": 28,
+   "entity": 28
+  },
+  "dim_macro_f1": 0.1111111111111111,
+  "cm_label": [
+   [
+    0,
+    140
+   ],
+   [
+    0,
+    140
+   ]
+  ],
+  "cm_dim": [
+   [
+    140,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ]
+ },
+ "dummy_always_preserved": {
+  "n": 280,
+  "missing_predictions": 0,
+  "acc": 0.5,
+  "macro_f1": 0.3333333333333333,
+  "fpr": 0.0,
+  "detect_recall": {
+   "negation": 0.0,
+   "quantity": 0.0,
+   "deadline": 0.0,
+   "intent": 0.0,
+   "entity": 0.0
+  },
+  "dim_recall": {
+   "negation": 0.0,
+   "quantity": 0.0,
+   "deadline": 0.0,
+   "intent": 0.0,
+   "entity": 0.0
+  },
+  "support": {
+   "negation": 28,
+   "quantity": 28,
+   "deadline": 28,
+   "intent": 28,
+   "entity": 28
+  },
+  "dim_macro_f1": 0.1111111111111111,
+  "cm_label": [
+   [
+    140,
+    0
+   ],
+   [
+    140,
+    0
+   ]
+  ],
+  "cm_dim": [
+   [
+    140,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ]
+ },
+ "translation_pipeline": {
+  "n": 280,
+  "missing_predictions": 0,
+  "acc": 0.95,
+  "macro_f1": 0.949874686716792,
+  "fpr": 0.1,
+  "detect_recall": {
+   "negation": 1.0,
+   "quantity": 1.0,
+   "deadline": 1.0,
+   "intent": 1.0,
+   "entity": 1.0
+  },
+  "dim_recall": {
+   "negation": 0.0,
+   "quantity": 0.0,
+   "deadline": 0.0,
+   "intent": 0.0,
+   "entity": 0.0
+  },
+  "support": {
+   "negation": 28,
+   "quantity": 28,
+   "deadline": 28,
+   "intent": 28,
+   "entity": 28
+  },
+  "dim_macro_f1": 0.1111111111111111,
+  "cm_label": [
+   [
+    126,
+    14
+   ],
+   [
+    0,
+    140
+   ]
+  ],
+  "cm_dim": [
+   [
+    140,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    28,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  ]
+ }
+}

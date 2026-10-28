@@ -1,0 +1,8 @@
+data/raw/
+checkpoints/
+predictions/
+__pycache__/
+*.pt
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/

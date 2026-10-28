@@ -1,0 +1,14 @@
+run_name: a3_xlmr
+base_model: xlm-roberta-base
+batch_size: 16
+grad_accum_steps: 2
+max_len: 128
+lr: 2.0e-5
+epochs: 4
+lambda_dim: 0.5
+seed: 42
+binary_only: false
+train_file: data/processed/train.jsonl
+dev_file: data/processed/dev.jsonl
+test_file: data/processed/test.jsonl
+output_dir: checkpoints/a3_xlmr

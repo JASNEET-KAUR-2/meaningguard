@@ -1,0 +1,14 @@
+run_name: a1_binary_only
+base_model: google/muril-base-cased
+batch_size: 16
+grad_accum_steps: 2
+max_len: 128
+lr: 2.0e-5
+epochs: 4
+lambda_dim: 0.5
+seed: 42
+binary_only: true
+train_file: data/processed/train.jsonl
+dev_file: data/processed/dev.jsonl
+test_file: data/processed/test.jsonl
+output_dir: checkpoints/a1_binary_only
