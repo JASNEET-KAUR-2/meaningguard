@@ -1,0 +1,21 @@
+pair_id,s1,s2,label,dimension
+S0068_1,प्लीज़ फीस भरो,Please fees bharo,preserved,none
+S0294_1,मैसेज कल तक भरो,Message kal tak bharo,preserved,none
+S0185_4,मैसेज चेक मत करो,मैसेज चेक ज़रूर करो,changed,negation
+S0112_3,इनवॉइस आज तक जमा करो,इनवॉइस कल तक जमा करो,changed,deadline
+S0151_4,प्लीज़ कॉपी भेजो,प्लीज़ कॉपी भेज दिया,preserved,none
+S0004_4,राहुल को इनवॉइस भेजो,अमित को इनवॉइस भेजो,changed,entity
+S0225_2,Kripya refund karo,Please refund karo,preserved,none
+S0101_3,Link kholna,Link mat kholna,changed,negation
+S0094_2,फोटो सेंड करो,फोटो सेंड करो.,preserved,none
+S0142_2,Swiggy par payment karo,swiggy par payment karo,preserved,none
+S0299_1,ज़ोमैटो पर बुकिंग करो,Zomato par booking karo,preserved,none
+S0278_2,sau ticket bhejo,Sau ticket bhejo,preserved,none
+S0296_1,300 रुपये ट्रांसफर करो,300 rupaye transfer karo,preserved,none
+S0264_4,Amit ko link bhejo,Rohan ko link bhejo,changed,entity
+S0034_4,तीन टिकट रखो,दस टिकट रखो,changed,quantity
+S0152_1,फॉर्म कल तक भेजो,Form kal tak bhejo,preserved,none
+S0063_4,Fees aaj tak bhejo,Fees aaj bhejo,preserved,none
+S0036_2,तीन फोटो देखो,तीन फोटो देखो.,preserved,none
+S0175_3,das package dekho,ek package dekho,changed,quantity
+S0225_3,Kripya refund karo,Kripya refund karna hai?,preserved,none
