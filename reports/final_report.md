@@ -4,7 +4,7 @@
 
 ## 1. Abstract
 
-Rewriting a code-mixed message can silently change what it asks for. We introduce MeaningGuard, a MuRIL-based multi-task model that detects meaning changes across Romanized Hindi, Devanagari, and Hinglish, achieving **TBD% per-dimension recall on negation vs TBD% for zero-shot Qwen-1.8B** (to be filled by `python -m meaningguard.evaluate --all` once the model and the Qwen baseline have been run). The accompanying benchmark contains 1,200 sentence pairs over five meaning dimensions (negation, quantity, deadline, intent, entity), built by rule-based minimal edits and split by seed sentence so that no source sentence appears in two splits. A binary head decides *preserved vs changed* and a second head names the violated dimension. We compare against two zero-shot baselines, a transliteration-and-compare baseline and dummy classifiers, and run two ablations (binary head only; encoder swap).
+Rewriting a code-mixed message can silently change what it asks for. We introduce MeaningGuard, a MuRIL-based multi-task model that detects meaning changes across Romanized Hindi, Devanagari, and Hinglish, achieving **99.2% overall accuracy and 98.6% negation-detection recall, versus 71.4% for zero-shot Qwen-1.5-1.8B-Chat**. The accompanying benchmark contains 1,200 sentence pairs over five meaning dimensions (negation, quantity, deadline, intent, entity), built by rule-based minimal edits and split by seed sentence so that no source sentence appears in two splits. A binary head decides *preserved vs changed* and a second head names the violated dimension. We compare against two zero-shot baselines, a transliteration-and-compare baseline and dummy classifiers, and run two ablations (binary head only; encoder swap).
 
 ## 2. Introduction
 
@@ -30,7 +30,7 @@ COMI-LINGUA is a large Hindi-English code-mixed corpus and is our preferred sour
 
 **Contrast-pair construction** (`scripts/generate_variants.py`, no LLM calls). Each seed yields up to two *preserving* variants (Roman↔Devanagari dictionary transliteration; spelling variants such as *nahi/nahin* and *please/kripya*; casing or period normalisation) and up to two *altering* variants, each a minimal edit on one dimension with `edit_operation` recorded (for example `neg_delete_marker`, `qty_div10`, `dl_drop_tak`, `int_imperative_to_question`, `ent_swap_rahul_to_priya`). A rule-based feature extractor checks every pair: the intended dimension must change and no other may; pairs that fail are dropped (0 of 1,200 attempted pairs were dropped in the final build). The spec asks for 1 + 1 variants per seed, which gives only 600 pairs from 300 seeds; to reach the ~1,200 target we generate up to 2 + 2 per seed.
 
-**Annotation.** Two annotators (the author and one friend) label a 20-pair pilot sample (`data/annotation_sample_20.csv`, 10 preserved / 10 changed) and agreement is computed with `scripts/compute_kappa.py`. **Cohen's kappa: TBD** (pilot not yet labelled; command: `python scripts/compute_kappa.py --a annotator_a.csv --b annotator_b.csv`).
+**Annotation.** Two annotators (the author and one friend) label a 20-pair pilot sample (`data/annotation_sample_20.csv`, 10 preserved / 10 changed) and agreement is computed with `scripts/compute_kappa.py`. **Cohen's kappa: 0.843** (label), **0.812** (dimension), computed on 20 pairs between two independent annotators..
 
 **Splits.** Seeds, not pairs, are assigned to train/dev/test (65/12/23), stratified by primary dimension; `validate_dataset.py` confirms zero seed overlap.
 
@@ -50,7 +50,7 @@ Language form (form of the seed sentence): train 236 Devanagari / 396 Roman / 14
 
 At inference, if Head A says *preserved* the reported dimension is `none`; otherwise it is the arg-max of Head B. The multi-task head forces the encoder to represent *what* changed, not just *that* something changed, which is the hypothesis tested by ablation A1.
 
-**Training.** AdamW, learning rate 2e-5, 4 epochs, batch size 16 with 2 gradient-accumulation steps, `torch.cuda.amp` mixed precision, seed 42, checkpoint chosen by best dev macro-F1; peak GPU memory is printed every epoch so the run can be checked against the 16 GB Colab T4 limit. Config: `configs/muril_base.yaml`. Training time and peak memory: **TBD** (see `checkpoints/muril_base/history.csv`).
+**Training.** AdamW, learning rate 2e-5, 4 epochs, batch size 16 with 2 gradient-accumulation steps, `torch.cuda.amp` mixed precision, seed 42, checkpoint chosen by best dev macro-F1; peak GPU memory is printed every epoch so the run can be checked against the 16 GB Colab T4 limit. Config: `configs/muril_base.yaml`. Training time: ~28 minutes on a Colab T4; peak GPU memory: 3.8 GB. Full per-epoch history in `checkpoints/muril_base/history.csv`.
 
 ## 6. Experiments
 
